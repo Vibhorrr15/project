@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Review Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Styles */
+header {
+    background-color: hsl(270, 10%, 31%);
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1em;
+}
+
+.review {
+    background-color: #fff;
+    padding: 1em;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Book Image Styles with Animation */
+.review img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    transition: transform 0.3s ease;
+}
+
+.review img:hover {
+    transform: scale(1.1);
+}
+
+.review h3 {
+    margin-top: 0;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    height:auto;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <h1>Book Review Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to the Book Review Website</h2>
+            <p>Your go-to place for honest and insightful book reviews.</p>
+        </section>
+
+        <section id="reviews">
+            <h2>Book Reviews</h2>
+            <div class="reviews-grid">
+                <article class="review">
+                    <img src="shopping.jpg" alt="The Wind On Haunted Hill">
+                    <h3>The Wind On Haunted Hill</h3>
+                    <p><strong>Author:</strong> Ruskin Bond</p>
+                    <p><strong>Review:</strong> This is a brief review of The Wind On Haunted Hill.</p>
+                </article>
+
+                <article class="review">
+                    <img src="book.jpg" alt="That Night">
+                    <h3>That Night</h3>
+                    <p><strong>Author:</strong> Nidhi Upadhyay</p>
+                    <p><strong>Review:</strong> This is a brief review of That Night.</p>
+                </article>
+
+                <article class="review">
+                    <img src="book3.jpg" alt="Think Straight">
+                    <h3>Think Straight</h3>
+                    <p><strong>Author:</strong> Darius Forux</p>
+                    <p><strong>Review:</strong> This is a brief review of Think Straight.</p>
+                </article>
+
+                <article class="review">
+                    <img src="Book4.jpg" alt="Sherlock Holmes">
+                    <h3>Sherlock Holmes</h3>
+                    <p><strong>Author:</strong> Conan Doyle</p>
+                    <p><strong>Review:</strong> This is a brief review of Sherlock Holmes.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about our mission and team.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries or feedback.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Book Review Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+  position: relative; /* Ensure container is relative for absolute positioning of icons */
+}
+
+.container:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-group input, .input-group select, .input-group textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  padding-left: 40px; /* Ensure space for icon */
+}
+
+.input-group i {
+  position: absolute;
+  left: 10px; /* Adjust the left position of the icon */
+  top: 50%;
+  transform: translateY(-50%);
+  color: #555;
+}
+
+.input-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 0 1.414 1.414L10 6.414l3.293 3.293a1 1 0 1 0 1.414-1.414l-4-4a1 1 0 0 0-1.414 0l-4 4a1 1 0 0 0 0 1.414zM10 17a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" clip-rule="evenodd"/></svg>') no-repeat right 12px center/12px 12px;
+}
+
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  margin: 10px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+  background-color: #048563;
+}
+
+.signin {
+  text-align: center;
+  margin-top: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Student Registration Form</h1>
+  <form action="/submit-form">
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="First Name" name="firstname" required>
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-user"></i>
+      <input type="text" placeholder="Last Name" name="lastname" required>
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-calendar-alt"></i>
+      <input type="date" name="dob" required>
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-graduation-cap"></i>
+      <select name="course">
+        <option value="">-- Select Course --</option>
+        <option value="BCA">BCA</option>
+        <option value="BBA">BBA</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="MBA">MBA</option>
+        <option value="MCA">MCA</option>
+        <option value="M.Tech">M.Tech</option>
+      </select>
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-envelope"></i>
+      <input type="email" placeholder="Email" name="email" required>
+    </div>
+
+    <div class="input-group">
+      <i class="fas fa-lock"></i>
+      <input type="password" placeholder="Password" name="password" required>
+    </div>
+
+    <button type="submit" class="registerbtn">Register</button>
+  </form>
+  <p class="signin">Already have an account? <a href="#">Sign in</a>.</p>
+</div>
+
+</body>
+</html>
